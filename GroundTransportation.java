@@ -15,5 +15,10 @@ public void setLicensePlate(String licensePlate){
 public String getTransportType() {
     return "Ground transport";
 }
+@Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder(super.toString());
 
-}
+        sb.append(String.format("\n%15s: %s\n", "Matrícula:", getLicensePlate()));  
+        return sb.toString();
+}}

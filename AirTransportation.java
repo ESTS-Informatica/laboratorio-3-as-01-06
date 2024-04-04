@@ -23,4 +23,13 @@ public void setNumberOfContainers (int numberOfContainers) {
 public String getTransportType() {
     return "Air transport";
 }
+  @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder(super.toString());
+
+        sb.append(String.format("\n%15s: %s\n", "Nome:", getName()));  
+        sb.append(String.format("%15s: %s\n", "Número de contentores:", getNumberOfContainers()));
+     
+        return sb.toString();
+}
 }
